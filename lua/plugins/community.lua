@@ -1,3 +1,4 @@
+local utils = require "astronvim.utils"
 return {
   "AstroNvim/astrocommunity",
   -- { import = "astrocommunity.motion.leap-nvim", enabled = true },
@@ -13,4 +14,5 @@ return {
     },
   },
   { import = "astrocommunity.pack.python", enabled = true },
+  { import = "astrocommunity.test", enabled = true },
 }
