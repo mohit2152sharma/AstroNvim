@@ -1,8 +1,19 @@
 local utils = require "astronvim.utils"
 return {
   "AstroNvim/astrocommunity",
+  -- motion plugins
   -- { import = "astrocommunity.motion.leap-nvim", enabled = true },
-  { import = "astrocommunity.motion.hop-nvim", enabled = true },
+  -- { import = "astrocommunity.motion.hop-nvim", enabled = true }, -- hop nvim deprecated
+  { import = "astrocommunity.motion.flash-nvim", enabled = true },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = { modes = { char = { jump_labels = true } } },
+    keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    },
+  },
   { import = "astrocommunity.motion.harpoon", enabled = true },
   { import = "astrocommunity.editing-support.neogen", enabled = true },
   {
