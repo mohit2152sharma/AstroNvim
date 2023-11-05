@@ -14,11 +14,14 @@ return {
     },
   },
   -- { import = "astrocommunity.pack.python-ruff", enabled = true },
+  -- add language packs
   { import = "astrocommunity.pack.markdown", enabled = true },
   { import = "astrocommunity.pack.yaml", enabled = true },
   { import = "astrocommunity.pack.svelte", enabled = true },
   { import = "astrocommunity.pack.html-css", enabled = true },
   { import = "astrocommunity.pack.json", enabled = true },
+  { import = "astrocommunity.pack.bash", enabled = true },
+
   { import = "astrocommunity.test", enabled = true },
   -- { import = "astrocommunity.motion.mini-surround", enabled = true },
   { import = "astrocommunity.syntax.vim-sandwich", enabled = true },
