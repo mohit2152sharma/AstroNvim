@@ -452,5 +452,6 @@ maps.n["<leader>uu"] = { ui.toggle_url_match, desc = "Toggle URL highlight" }
 maps.n["<leader>uw"] = { ui.toggle_wrap, desc = "Toggle wrap" }
 maps.n["<leader>uy"] = { ui.toggle_syntax, desc = "Toggle syntax highlighting (buffer)" }
 maps.n["<leader>uh"] = { ui.toggle_foldcolumn, desc = "Toggle foldcolumn" }
+maps.n["<leader>uB"] = { ui.toggle_git_blame, desc = "Toggle git blame" }
 
 utils.set_mappings(astronvim.user_opts("mappings", maps))

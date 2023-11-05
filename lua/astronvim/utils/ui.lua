@@ -268,4 +268,12 @@ function M.toggle_foldcolumn(silent)
   ui_notify(silent, string.format("foldcolumn=%s", vim.wo.foldcolumn))
 end
 
+--- Toggle git blame function
+---@param silent? boolean if true then don't sent a notificaton
+function M.toggle_git_blame(silent)
+  vim.g.git_blame_enabled = not vim.g.git_blame_enabled
+  vim.cmd "ToggleBlame virtual"
+  ui_notify(silent, string.format("Git blame %s", bool2str(vim.g.git_blame_enabled)))
+end
+
 return M
