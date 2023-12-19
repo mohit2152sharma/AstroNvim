@@ -55,4 +55,6 @@ return {
       { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
     },
   },
+  { import = "astrocommunity.completion.codeium-vim", enabled = true },
+  { import = "astrocommunity.note-taking.obsidian-nvim", enabled = true },
 }
