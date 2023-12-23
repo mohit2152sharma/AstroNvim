@@ -41,9 +41,10 @@ local options = astronvim.user_opts("options", {
     timeoutlen = 500, -- shorten key timeout length a little bit for which-key
     undofile = true, -- enable persistent undo
     updatetime = 300, -- length of time to wait before triggering the plugin
-    virtualedit = "block", -- allow going past end of line in visual block mode
     wrap = true, -- disable wrapping of lines longer than the width of window
     writebackup = false, -- disable making a backup before overwriting a file
+    virtualedit = "block", -- allow going past end of line in visual block mode
+    inccommand = "split", -- this shows all the field to be replaced in a small window
   },
   g = {
     mapleader = " ", -- set leader key
