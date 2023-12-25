@@ -35,7 +35,10 @@ return {
       -- search_venv_managers = false,
       search_workspace = false,
     },
-    keys = { { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" } },
+    keys = {
+      { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" },
+      { "<leader>lc", "<cmd>:VenvSelectCached<cr>", desc = "Select Cached VirtualEnv" },
+    },
   },
   {
     "mfussenegger/nvim-dap-python",

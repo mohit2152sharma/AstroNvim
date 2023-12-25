@@ -45,6 +45,7 @@ local options = astronvim.user_opts("options", {
     writebackup = false, -- disable making a backup before overwriting a file
     virtualedit = "block", -- allow going past end of line in visual block mode
     inccommand = "split", -- this shows all the field to be replaced in a small window
+    scrolloff = 999, -- number of lines to keep above and below the cursor
   },
   g = {
     mapleader = " ", -- set leader key
