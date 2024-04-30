@@ -1,4 +1,5 @@
 local utils = require "astronvim.utils"
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -28,13 +29,17 @@ return {
   },
   {
     "linux-cultist/venv-selector.nvim",
-    opts = {
-      search = false,
-      anaconda_envs_path = os.getenv "HOME" .. "/miniconda3/envs",
-      auto_refresh = true,
-      -- search_venv_managers = false,
-      search_workspace = false,
-    },
+    lazy = false,
+    config = function()
+      local venv = require "venv-selector"
+      venv.setup {
+        search = false,
+        anaconda_envs_path = os.getenv "HOME" .. "/miniconda3/envs",
+        auto_refresh = true,
+        search_workspace = false,
+      }
+      venv.retrieve_from_cache()
+    end,
     keys = {
       { "<leader>lv", "<cmd>:VenvSelect<cr>", desc = "Select VirtualEnv" },
       { "<leader>lc", "<cmd>:VenvSelectCached<cr>", desc = "Select Cached VirtualEnv" },

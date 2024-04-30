@@ -21,6 +21,7 @@ return {
     opts = {
       languages = {
         python = { template = { annotation_convention = "google_docstrings" } },
+        javascript = { template = { annotation_convention = "jsdoc" } },
       },
     },
   },
@@ -33,7 +34,7 @@ return {
   { import = "astrocommunity.pack.json", enabled = true },
   { import = "astrocommunity.pack.bash", enabled = true },
 
-  { import = "astrocommunity.test", enabled = true },
+  -- { import = "astrocommunity.test", enabled = true },
   -- { import = "astrocommunity.motion.mini-surround", enabled = true },
   { import = "astrocommunity.syntax.vim-sandwich", enabled = true },
   { import = "astrocommunity.lsp.lsp-signature-nvim", enabled = true },
@@ -57,4 +58,26 @@ return {
   },
   { import = "astrocommunity.completion.codeium-vim", enabled = true },
   { import = "astrocommunity.note-taking.obsidian-nvim", enabled = true },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        keymaps = {
+          insert = "<C-g>s",
+          insert_line = "<C-g>S",
+          normal = "ys",
+          normal_cur = "yss",
+          normal_line = "yS",
+          normal_cur_line = "ySS",
+          visual = "S",
+          visual_line = "gS",
+          delete = "ds",
+          change = "cs",
+          change_line = "cS",
+        }, -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
 }
